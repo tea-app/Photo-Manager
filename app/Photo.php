@@ -27,4 +27,26 @@ class Photo
         $stmt->execute();
     }
     
+    public function exists($id)
+    {
+        $stmt = $this->connect->prepare('SELECT * FROM ' . $this->dbtable . ' WHERE id = :id');
+        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+        $exists = $stmt->fetchAll();
+        
+        if ($exists[0]['id'] == null) { return false; }
+        return true;
+    }
+    
+    public function select($filename)
+    {
+        if (! $this->exists($filename)) { return null; }
+        
+        $stmt = $this->connect->prepare('SELECT * FROM ' . $this->dbtable . ' WHERE filename = :filename');
+        $stmt->bindValue(':filename', $filename, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    }
+    
 }
