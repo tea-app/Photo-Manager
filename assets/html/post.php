@@ -4,7 +4,7 @@
         <meta charset = "utf-8">
         <title>Photo-Manager</title>
         <!--index.cssのリンクタブ-->
-        <link href="assets/css/post.css" type="text/css" rel="stylesheet">
+        <link href="../css/post.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <!--###ヘッダ###ー-->
@@ -12,10 +12,10 @@
         <header>
             <div class="header-box">
                 <!---alt属性は写真の属性を表す、特に意味のないときは""と書いておく--->
-                <a class="logo" id="logo" href="../html/index.php"><img src="../img/post-logo02.png" alt=""></a>
+                <a class="logo" id="logo" href="./index.php"><img src="../img/post-logo02.png" alt=""></a>
                 <!--のちにアイコンをPhoto-ManegerとPostで分ける-->
 <!--                <a class="logo" id="logo" href="index.php"><img src="assets/img/post.png" alt=""></a>-->
-                <a class="acount-icon" href="../html/index.php"><img src="../img/icon.png"></a>
+                <a class="acount-icon" href="./index.php"><img src="../img/icon.png"></a>
             </div>
         </header>
         <!--###メイン###-->
@@ -23,7 +23,7 @@
            <div class="container">
               <div class="posthover">
                 <div class="postphoto">
-                  <img class="postphoto-img" src="./assets/img/DSCF2571.jpg" width="550px;" height="400px">
+                  <img class="postphoto-img" src="../img/DSCF2571.jpg" width="550px;" height="400px">
                   <form>
                     <label class="form-file" for="file_photo">
                     	＋choose photo
