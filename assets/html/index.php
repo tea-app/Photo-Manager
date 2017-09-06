@@ -4,7 +4,7 @@
         <meta charset = "utf-8">
         <title>Photo-Manager</title>
         <!--index.cssのリンクタブ-->
-        <link href="assets/css/index.css" type="text/css" rel="stylesheet">
+        <link href="../css/index.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <!--###ヘッダ###ー-->
