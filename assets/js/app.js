@@ -22,8 +22,7 @@
 
         s3.upload(params, function(err, data) {
             var uri = data.Location;
-            console.log(data);
-            
+
             // 通信開始
             var promise = $.ajax({
                 url: "newComputerVisionApi.php",
@@ -34,15 +33,20 @@
                     name: name,
                 }
             });
-            
-            promise.done(function (result) {
-                // 通信完了時の処理... 
-                console.log(result);
+
+            // promise.done(function (result) {
+            //     // 通信完了時の処理...
+            //     console.log('success');
+            // });
+
+            promise.always(function (result, hoge) {
+                console.log(data);
+                if (result.status !== 200) {
+                    window.alert('Upload fail.\n Error: Network error.');
+                }
+
+                window.location = '/';
             });
-            
-            promise.fail(function(result){
-                console.log(result);
-            });    
         });
     }
 
@@ -59,6 +63,17 @@
             var file = document.getElementById('form-input-file').files[0];
 
             upload(file.name, file);
+        });
+
+        document.getElementById('form-input-file').addEventListener('change', function (e) {
+            var file    = e.target.files[0];
+            var reader  = new FileReader();
+            var dataUrl;
+            reader.readAsDataURL(file);
+            reader.onload = function() {
+                dataUrl = reader.result;
+                document.getElementById('js-photo-img').src = dataUrl;
+            };
         });
     }
 

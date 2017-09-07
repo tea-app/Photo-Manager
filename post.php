@@ -25,7 +25,7 @@
            <div class="container">
               <div class="posthover">
                 <div class="postphoto">
-                  <img class="postphoto-img" src="assets/img/DSCF2571.jpg" width="550px;" height="400px">
+                  <img id="js-photo-img" class="postphoto-img" src="assets/img/DSCF2571.jpg" width="550px;" height="400px">
                     <form>
                         <label class="form-file" for="form-input-file">
                             ＋choose photo
@@ -37,7 +37,7 @@
 
                       <h2>-  自分の世界を伝えよう  -</h2>
 
-                      
+
 
                 </div>
               </div>
