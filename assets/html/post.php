@@ -26,10 +26,21 @@
                   <img class="postphoto-img" src="../img/DSCF2571.jpg" width="550px;" height="400px">
                   <form>
                     <label class="form-file" for="file_photo">
+                        <form action="../../app/photo_manager.php" method="post" enctype="multipart/form-data">
                     	＋choose photo
-                    	<input type="file" id="file_photo" name="img" style="display:none;">
+                    	<input type="file" id="file_photo" name="image" style="display:none;">
+                        <input class="form-submit" type="submit" value="upload">
+                        </form>
+                        
+<!--
+                        <form action="../../app/photo_manager.php" method="post" enctype="multipart/form-data">
+                            input typeは"fileを設定する
+                            <input type="file" name="image">
+                            <input type="submit" value="upload">
+                        </form>
+-->
+                        
                     </label>
-                    <input class="form-submit" type="submit" value="Post">
 
                       <h2>-  自分の世界を伝えよう  -</h2>
 
