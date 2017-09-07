@@ -11,9 +11,9 @@
         <header>
             <div class="header-box">
                 <!---alt属性は写真の属性を表す、特に意味のないときは""と書いておく--->
-                <a class="logo" id="logo" href="index.php"><img src="assets/img/logo03.png" alt=""></a>
+                <a class="logo" id="logo" href="index.php"><img src="../img/logo03.png" alt=""></a>
                 <input class= "search "type="search" name="search" size="15" autocomplete="on" maxlength="15" placeholder="Search using tag">
-                <a class="acount-icon" href="index.php"><img src="assets/img/icon.png"></a>
+                <a class="acount-icon" href="index.php"><img src="../img/icon.png"></a>
             </div>
         </header>
         <!--###トップ###-->
