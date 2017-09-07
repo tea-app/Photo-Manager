@@ -120,14 +120,7 @@ header {
     background-color: rgba(10, 10, 10, 0.4);
     padding: 1%;
     box-sizing:border-box;
-}
-
-.gallery-table {
-    width: 1383px;
-    height: 400px;
-    background-color:white;
-    margin-bottom: 10px;
-    display: inline-block;
+     display: inline-block;
 }
 
 .gallery-photo {
