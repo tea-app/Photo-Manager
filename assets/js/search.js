@@ -3,7 +3,5 @@ function search(event) {
 
     if (event.code !== 'Enter') { return; }
 
-    var searchText = document.getElementById('search-input').value;
-
-    window.location = "?search=" + searchText;
+    window.location = "?search=" + event.target.value
 }
