@@ -1,19 +1,50 @@
+<?php
+
+// もし検索されたら
+// http://domain.com?search=biwako
+if (! is_null($_GET['search'])) {
+    $tag = $_GET['search'];
+
+    // 絞りこみ
+}
+
+// 検索されない場合
+else {
+   // 全部取得...
+
+}
+
+
+$imagePaths = array(
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+    'https://s3-ap-northeast-1.amazonaws.com/tea-liquid-cats/7325.jpg',
+);
+
+?>
 <!DOCTYPE html>
 <html lang=ja>
     <head>
         <meta charset = "utf-8">
         <title>Photo-Manager</title>
         <!--index.cssのリンクタブ-->
-        <link href="../css/index.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/index.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <!--###ヘッダ###ー-->
         <header>
             <div class="header-box">
                 <!---alt属性は写真の属性を表す、特に意味のないときは""と書いておく--->
-                <a class="logo" id="logo" href="index.php"><img src="../img/logo03.png" alt=""></a>
+                <a class="logo" id="logo" href="index.php"><img src="assets/img/logo03.png" alt=""></a>
                 <input class= "search "type="search" name="search" size="15" autocomplete="on" maxlength="15" placeholder="Search using tag">
-                <a class="acount-icon" href="index.php"><img src="../img/icon.png"></a>
+                <a class="acount-icon" href="index.php"><img src="assets/img/icon.png"></a>
             </div>
         </header>
         <!--###トップ###-->
@@ -46,9 +77,10 @@
                     <div class = "gallery-bar">
                     </div>
                     <div class = "gallery-main">
-                        <?php for($i=0; $i<5; $i++) { ?>
+                        <?php foreach ($imagePaths as $imagePath) { ?>
                         <div class = "gallery-table">
                             <div class = "gallery-photo">
+                                <img src="">
                             </div>
                             <div class = "gallery-photo">
                             </div>
@@ -57,6 +89,7 @@
                             <div class = "gallery-photo">
                             </div>
                         </div>
+
                         <?php } ?>
                         <div class = "gallery-more">
                         <a>more</a>

@@ -1,24 +1,17 @@
-<!DOCKTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<script src="assets/js/aws-sdk.min.js"></script>
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<title>uploader</title>
-</head>
-    
-<body>
+    <head>
+        <script src="assets/js/aws-sdk.min.js"></script>
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Hello World</h1>
 
-<!--formのenctypeに"multipart/form-data"を設定する-->
-<form action="./app/photo_manager.php" method="post" enctype="multipart/form-data">
+        <form action="getFileName.php" method="post">
+            <input id="form-input-file" name="image" type="file" accept="image">
+            <button type="button" id="form-input-submit">Upload</button>
+        </form>
 
-<!--input typeは"fileを設定する-->
-<input id="form-input-file" name="image" type="file" accept="image" name="image">
-<button type="button" id="form-input-submit" value="upload">Upload</button>
-    
-</form>
-<script src="assets/js/app.js"></script>
-    
-</body>
-
+        <script src="assets/js/app.js"></script>
+    </body>
 </html>
