@@ -24,8 +24,6 @@
             var uri = data.Location;
             console.log(data);
             
-            var encode_stream = ImageToBase64();
-            
             // 通信開始
             var promise = $.ajax({
                 url: "newComputerVisionApi.php",
