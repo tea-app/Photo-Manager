@@ -54,18 +54,6 @@ $imagePaths = array(
             </div>
             <div class = "search-box">
                 <input id="search-input" type="text" name="main-search" size="80" autocomplete="on" maxlength="15" placeholder="Search using tag" onkeydown="search(event);">
-<!--
-                <table>
-                    <tr>
-                        <td>
-                            <img src="assets/img/%E8%99%AB%E7%9C%BC%E9%8F%A101.png">
-                        </td>
-                        <td>
-                            <input type="text" name="main-search" size="80" autocomplete="on" maxlength="15" placeholder="Search using tag">
-                        </td>
-                    </tr>
-                </table>
--->
             </div>
             <div class = "top-bottom">
             </div>
