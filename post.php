@@ -32,13 +32,8 @@
                             <input id="form-input-file" name="image" type="file" accept="image" style="display:none;">
                         </label>
                     </form>
-                    <button class="form-submit" type="button" id="form-input-submit">Upload</button>
-
-
-                      <h2>-  自分の世界を伝えよう  -</h2>
-
-
-
+                    <button class="form-submit" type="button" id="form-input-submit">Upload</button>s
+                    <h2>-  自分の世界を伝えよう  -</h2>
                 </div>
               </div>
           </div>
