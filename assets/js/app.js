@@ -22,7 +22,9 @@
 
         s3.upload(params, function(err, data) {
             var uri = data.Location;
-            console.log(uri);
+            console.log(data);
+            
+            var encode_stream = ImageToBase64();
             
             // 通信開始
             var promise = $.ajax({
@@ -30,7 +32,8 @@
                 type: "post",
                 dataType: "json",
                 data: {
-                    uri: uri
+                    uri: uri,
+                    name: name,
                 }
             });
             
