@@ -2,6 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<script src="assets/js/aws-sdk.min.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
 <title>uploader</title>
 </head>
     
@@ -11,11 +13,12 @@
 <form action="./app/photo_manager.php" method="post" enctype="multipart/form-data">
 
 <!--input typeは"fileを設定する-->
-<input type="file" name="image">
-<input type="submit" value="upload">
+<input id="form-input-file" name="image" type="file" accept="image" name="image">
+<button type="button" id="form-input-submit" value="upload">Upload</button>
     
 </form>
-
+<script src="assets/js/app.js"></script>
+    
 </body>
 
 </html>
