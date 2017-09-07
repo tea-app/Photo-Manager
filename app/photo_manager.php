@@ -5,12 +5,13 @@ require_once(__DIR__.'/FileReceiver.php');
 require_once(__DIR__.'/Photo.php');
 
 
-$files = $_FILES;
-$receiver = new FileReceiver($files);
+$receiver = new FileReceiver($_FILES);
 $receiver->upload();
 
-$filename = $_FILES['image']['name'];
+/* api */
+
 $pdo = connect();
 $photo = new Photo($pdo);
-$photo->insert($filename);
+//$photo->insert($_FILES['image']['name']);
 
+$photo->select($_GET['filename']);
