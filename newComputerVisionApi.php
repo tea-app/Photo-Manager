@@ -1,8 +1,9 @@
 <?php
 
-//$uri = "httsps://tea-liquid-cats.s3-ap-northeast-1.amazonaws.com/FullSizeRender3.jpg";
+//$uri = "https://tour.tabikobo.com/uploads/image/61395.jpg";
 $uri = $_POST['uri'];
-//var_dump($uri);
+$file = $_POST['body'];
+var_dump($file);
 
 $url = 'https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze';
 
@@ -31,12 +32,22 @@ $ch = curl_init($url . '?' . http_build_query($parameters));
 curl_setopt_array($ch, $opt);
 $result = curl_exec($ch);
 curl_close($ch);
-var_dump($result);
+//var_dump(gettype($value));
+$data = json_decode($result, true);
+//var_dump($result);
+var_dump($data);
+//echo count($data["categories"]);
+//echo $data["categories"][0]["name"];
+
+for($i=0;$i<count($data["categories"]); $i++){
+//    echo $data["categories"][$i]["name"];
+    $tag_set = $data["categories"][$i]["name"];
+}
+
 
 function urlBody($uri)
 {
     $body = "{ 'url' : '$uri'}";
-//    $body = array('uri' => $uri);
     return $body;
 }
 
