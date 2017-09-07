@@ -43,7 +43,7 @@ $imagePaths = array(
             <div class="header-box">
                 <!---alt属性は写真の属性を表す、特に意味のないときは""と書いておく--->
                 <a class="logo" id="logo" href="index.php"><img src="assets/img/logo03.png" alt=""></a>
-                <input class= "search" type="search" name="search" size="15" autocomplete="on" maxlength="15" placeholder="Search using tag" onkeydown="search(event);">
+                <input class= "search "type="search" name="search" size="15" autocomplete="on" maxlength="15" placeholder="Search using tag">
                 <a class="acount-icon" href="index.php"><img src="assets/img/icon.png"></a>
             </div>
         </header>
@@ -53,7 +53,7 @@ $imagePaths = array(
                 <h1>さあ、世界を見よう</h1>
             </div>
             <div class = "search-box">
-                <input type="text" name="main-search" size="80" autocomplete="on" maxlength="15" placeholder="Search using tag" onkeydown="search(event);">
+                <input id="search-input" type="text" name="main-search" size="80" autocomplete="on" maxlength="15" placeholder="Search using tag" onkeydown="search(event);">
 <!--
                 <table>
                     <tr>
@@ -78,22 +78,13 @@ $imagePaths = array(
                     </div>
                     <div class = "gallery-main">
                         <?php foreach ($imagePaths as $imagePath) { ?>
-                        <div class = "gallery-table">
                             <div class = "gallery-photo">
-                                <img src="">
+                                <img src="<?php echo $imagePath?>">
                             </div>
-                            <div class = "gallery-photo">
-                            </div>
-                            <div class = "gallery-photo">
-                            </div>
-                            <div class = "gallery-photo">
-                            </div>
-                        </div>
-
                         <?php } ?>
-                        <div class = "gallery-more">
-                        <a>more</a>
                     </div>
+                    <div class = "gallery-more">
+                        <a>more</a>
                     </div>
                 </div>
             </div>
