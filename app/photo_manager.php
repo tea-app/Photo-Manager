@@ -12,6 +12,6 @@ $receiver->upload();
 
 $pdo = connect();
 $photo = new Photo($pdo);
-//$photo->insert($_FILES['image']['name']);
+$photo->insert($_FILES['image']['name']);
 
-$photo->select($_GET['filename']);
+//$photo->select($_GET['filename']);
