@@ -45,7 +45,7 @@
                     window.alert('Upload fail.\n Error: Network error.');
                 }
 
-                window.location = '/';
+                window.location = '/index.php';
             });
         });
     }
