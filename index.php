@@ -53,7 +53,7 @@ $imagePaths = array(
                 <h1>さあ、世界を見よう</h1>
             </div>
             <div class = "search-box">
-                <input type="text" name="main-search" size="80" autocomplete="on" maxlength="15" placeholder="Search using tag">
+                <input id="search-input" type="text" name="main-search" size="80" autocomplete="on" maxlength="15" placeholder="Search using tag" onkeydown="search(event);">
 <!--
                 <table>
                     <tr>
@@ -101,5 +101,7 @@ $imagePaths = array(
         <!--###フッタ###ー-->
         <footer id="footer">
         </footer>
+        <script src="assets/js/search.js"></script>
+
     </body>
 </html>
